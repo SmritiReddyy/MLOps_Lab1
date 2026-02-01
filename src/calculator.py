@@ -57,6 +57,24 @@ def fun4(x,y,z):
     total_sum = x + y + z
     return total_sum
 
+# extra function to validate zeroes 
+def fun5(x, y):
+    """
+    Divides x by y.
+    Args:
+        x (int/float): Numerator
+        y (int/float): Denominator
+    Returns:
+        float: Division result
+    Raises:
+        ValueError: If inputs are not numbers or division by zero
+    """
+    if not (isinstance(x, (int, float)) and isinstance(y, (int, float))):
+        raise ValueError("Both inputs must be numbers.")
+    if y == 0:
+        raise ValueError("Division by zero is not allowed.")
+    return x / y
+
 
 # f1_op = fun1(2,3)
 # f2_op = fun2(2,3)
